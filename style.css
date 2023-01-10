@@ -19,8 +19,7 @@ html {
    line-height: 1;
    font-family: var(--font-base);
 }
-body {
-}
+
 img {
    display: block;
    /* width: 100%; i didn;t use of max-width which is a great practive to do all the time */
