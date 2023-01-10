@@ -118,6 +118,9 @@ img {
 
    cursor: pointer;
 }
+.btn:hover {
+   background-color: hsl(158, 35%, 19%);
+}
 
 .shopping-icon {
    width: 1.3rem;
