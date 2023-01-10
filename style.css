@@ -1,0 +1,149 @@
+/* ///////css variables */
+
+:root {
+   --base-font-size: 1rem;
+   --gray-color: hsl(228, 12%, 48%);
+   --font-base: "Montserrat", serif;
+   --font-accent: "Fraunces", sans-serif;
+}
+
+/* /////////reset//////// */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html {
+   line-height: 1;
+   font-family: var(--font-base);
+}
+body {
+}
+img {
+   display: block;
+   /* width: 100%; i didn;t use of max-width which is a great practive to do all the time */
+   height: auto;
+}
+
+/* //////////styling///////// */
+.main {
+   background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+   height: 100vh; /*/// give this to parent ///*/
+   /* /// margin: 0 auto; important  in this situation you dont need this /// */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.sub-container {
+   max-width: 550px; /*/// give this to child /// */
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
+   border-radius: 0.4rem;
+   overflow: hidden;
+
+   background-color: #fff;
+   color: #444;
+}
+
+.img-perfume-desktop,
+.img-perfume-mobile {
+   width: 100%;
+
+   object-fit: cover;
+}
+.img-perfume-mobile {
+   display: none;
+}
+.detalis {
+   font-size: var(--base-font-size);
+   padding: 1.3rem 1.5rem;
+
+   display: grid;
+   grid-template-columns: 1;
+   align-content: space-between;
+}
+.preview-text {
+   letter-spacing: 0.2rem;
+   text-transform: uppercase;
+   color: var(--gray-color);
+}
+.title {
+   font-size: 2.3rem;
+   letter-spacing: -1px;
+
+   font-family: var(--font-accent);
+}
+.main-text {
+   line-height: 1.2;
+   color: var(--gray-color);
+}
+.price-wrapper {
+   display: flex;
+   align-items: center;
+   gap: 0.4rem;
+}
+.price {
+   font-size: 1.8rem;
+   font-family: var(--font-accent);
+   color: hsl(158, 36%, 37%);
+}
+.crossed-out-price {
+   text-decoration: line-through;
+   font-weight: bold;
+}
+.btn {
+   display: block;
+   background-color: hsl(158, 36%, 37%);
+   padding: 0.7rem 1.2rem;
+   border-radius: 0.4rem;
+
+   color: #fff;
+   text-decoration: none;
+   text-transform: capitalize;
+   text-align: center;
+
+   font-size: 0.89rem;
+   font-weight: bold;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.4rem;
+
+   cursor: pointer;
+}
+
+.shopping-icon {
+   width: 1.3rem;
+}
+/*/////// media queries ///////// 
+  /////// media queries ///////// */
+@media (max-width: 600px) {
+   .container {
+      padding: 1rem 1rem;
+   }
+   .detalis {
+      row-gap: 1rem;
+   }
+   .sub-container {
+      place-content: calc();
+      grid-template-columns: 1fr;
+   }
+   .img-perfume-desktop {
+      display: none;
+   }
+   .img-perfume-mobile {
+      display: block;
+   }
+   .price-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+   }
+}
